@@ -2,7 +2,7 @@
 {
     public class StringCalculator
     {
-        public int Add(string numbers)
+        public string Add(string numbers)
         {
             throw new NotImplementedException();
         }
