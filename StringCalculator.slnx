@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="StringCalculator.Tests/StringCalculator.Tests.csproj" />
+  <Project Path="StringCalculator/StringCalculator.csproj" />
+</Solution>
