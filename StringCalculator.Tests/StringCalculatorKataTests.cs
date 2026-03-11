@@ -14,17 +14,24 @@ public class StringCalculatorKataTests
     }
 
     [Test]
-    [Category("Step02")]
+    [Category("Step01")]
     public void Add_SingleNumber_ReturnsThatNumber()
     {
         Assert.That(_calculator.Add("1"), Is.EqualTo(1));
     }
 
     [Test]
-    [Category("Step03")]
-    [TestCase("1,2", 3)]
+    [Category("Step01")]
+    public void Add_TwoNumbers_ReturnsSum()
+    {
+        Assert.That(_calculator.Add("1,2"), Is.EqualTo(3));
+    }
+
+    [Test]
+    [Category("Step02")]
     [TestCase("4,5,6", 15)]
-    public void Add_MultipleCommaSeparatedNumbers_ReturnsSum(string input, int expected)
+    [TestCase("1,2,3,4,5", 15)]
+    public void Add_UnknownAmountOfNumbers_ReturnsSum(string input, int expected)
     {
         Assert.That(_calculator.Add(input), Is.EqualTo(expected));
     }
